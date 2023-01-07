@@ -1,2 +1,7 @@
 /build
 /.ccls-cache
+
+.clang-format
+compile_commands.json
+/cmake-build-debug
+*.idea
