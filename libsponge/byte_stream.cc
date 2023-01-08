@@ -59,8 +59,9 @@ std::string ByteStream::read(const size_t len) {
   if( readLen == 0 ){
     return {};
   }
+  string s{_storage.data()+_starting_offset,readLen};
   _starting_offset += readLen;
-  return {_storage.data()+_starting_offset,readLen};
+  return s;
 }
 
 void ByteStream::end_input() {
